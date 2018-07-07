@@ -9,10 +9,12 @@ def update_prices(coins):
     prices = binance.prices()
     for c in coins:
         price = prices.get(c.name)
-        c.addPrice(price)
+        c.add_price(price)
         # Coins have their own average function
         c.sma()
-        print("Coin: " + c.name + " SMA: " + str(c.average) + " Current Price: " + price)
+        # Changes average out of scientific notation
+        printaverage="{0:0.8f}".format(c.average)
+        print("Coin: {}, SMA: {}, Current Price: {}".format(c.name, printaverage, price))
 
 
 # Make initial coin objects, list of objects will be passed around
@@ -25,7 +27,7 @@ def initialize_coins():
     for c in coinNames:
         # Create coin and add starting price
         tmpcoin = coin(c)
-        tmpcoin.addPrice(prices.get(c))
+        tmpcoin.add_price(prices.get(c))
         coins.append(tmpcoin)
     return coins
 

@@ -1,0 +1,1 @@
+from BitcoinPriceAverager.src.coin import coin

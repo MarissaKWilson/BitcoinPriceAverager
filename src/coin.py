@@ -8,7 +8,7 @@ class coin():
 
     # Adds prices to the list of prices
     # removes the oldest price after 60 prices have been added
-    def addPrice(self, price):
+    def add_price(self, price):
         self.prices.append(price)
         if (len(self.prices)) > 60:
             self.prices.pop(0)
