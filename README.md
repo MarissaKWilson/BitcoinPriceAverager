@@ -6,7 +6,10 @@ Uses a Simple Moving Average and the Binance python API.
 By default all coins refresh every second and provide an average of the past minute of prices
 Coins are created as an object so in the future individual coins can have custom refresh times.
 
-Running the program is as simple as calling navigating to the folder and calling Python BitcoinPriceAverager/src/main.py
+This program is written in python 3.6 and requires the Binance api. 
+To install Binance run "pip install binance" and "pip install requests" 
+
+Running the program is as simple as navigating to the folder and calling "python BitcoinPriceAverager/src/main.py"
 
 If the program runs as expected the output will be similar to below:
 
